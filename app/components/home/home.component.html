@@ -1,0 +1,12 @@
+<ActionBar [title]="'HOME.TITLE' | translate"  class="actionbar">
+</ActionBar>
+<ScrollView class="page-wrapper">
+    <StackLayout>
+        <StackLayout class="picture-wrapper">
+            <Image class="picture" src="~/assets/images/nativescript-nl.png"></Image>
+        </StackLayout>
+        <StackLayout class="page">
+            <Button class="button" [text]="'HOME.LINK' | translate" [nsRouterLink]="['/example']"></Button>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>
