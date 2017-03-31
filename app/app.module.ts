@@ -12,7 +12,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 // for AoT compilation
 export function translateLoaderFactory(http: Http) {
-  return new TranslateHttpLoader(http, "/i18n", ".json");
+    return new TranslateHttpLoader(http, "/i18n/", ".json");
 };
 
 @NgModule({
@@ -23,13 +23,13 @@ export function translateLoaderFactory(http: Http) {
         NativeScriptHttpModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(AppRoutes),
-        TranslateModule.forRoot([{
+        TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
                 deps: [Http],
                 useFactory: (translateLoaderFactory)
             }
-        }])
+        })
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })
