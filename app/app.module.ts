@@ -2,13 +2,15 @@ import {NativeScriptModule} from "nativescript-angular/nativescript.module";
 import {NativeScriptHttpModule} from "nativescript-angular/http";
 import {NativeScriptRouterModule} from "nativescript-angular/router";
 import {NgModule, NO_ERRORS_SCHEMA} from "@angular/core";
-import {Http} from "@angular/http";
-import {AppRoutes, AppComponents} from "./app.routing";
 
-import {AppComponent} from "./app.component";
+import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {Http} from "@angular/http";
+
+import {AppComponent} from "./app.component";
+import {AppRoutes, AppComponents} from "./app.routing";
 
 // for AoT compilation
 export function translateLoaderFactory(http: Http) {

@@ -3,10 +3,10 @@ import {Location} from "@angular/common";
 
 import {TranslateService} from '@ngx-translate/core';
 
-
 @Component({
     selector: "example",
-    templateUrl: "./components/example/example.component.html"
+    moduleId: module.id,
+    templateUrl: "./example.component.html"
 })
 
 export class ExampleComponent implements OnInit {
