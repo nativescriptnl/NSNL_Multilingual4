@@ -6,7 +6,7 @@ import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: "example",
-    templateUrl: "./components/example/example.component.html"
+    templateUrl: "./example.component.html"
 })
 
 export class ExampleComponent implements OnInit {
