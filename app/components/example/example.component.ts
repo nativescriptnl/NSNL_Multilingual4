@@ -3,9 +3,9 @@ import {Location} from "@angular/common";
 
 import {TranslateService} from '@ngx-translate/core';
 
-
 @Component({
     selector: "example",
+    moduleId: module.id,
     templateUrl: "./example.component.html"
 })
 
