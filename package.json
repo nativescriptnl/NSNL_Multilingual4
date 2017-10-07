@@ -12,6 +12,22 @@
       "version": "3.2.0"
     }
   },
+  "scripts": {
+    "pretsc": "npm install",
+    "tsc": "tsc",
+    "pretslint": "npm run tsc",
+    "tslint": "tslint -p tsconfig.json",
+    "prebuild": "npm run tslint",
+    "build": "node scripts/build.js",
+    "postbuild": "npm run inject && npm run archive",
+    "ns-bundle": "ns-bundle",
+    "publish-ios-bundle": "npm run ns-bundle --ios --publish-app",
+    "generate-android-snapshot": "generate-android-snapshot --targetArchs arm,arm64,ia32 --install",
+    "start-android-bundle": "npm run ns-bundle --android --run-app",
+    "start-ios-bundle": "npm run ns-bundle --ios --run-app",
+    "build-android-bundle": "npm run ns-bundle --android --build-app",
+    "build-ios-bundle": "npm run ns-bundle --ios --build-app"
+  },
   "dependencies": {
     "@angular/animations": "~4.2.6",
     "@angular/common": "~4.2.6",
